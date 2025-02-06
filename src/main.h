@@ -2,8 +2,10 @@
 
 #include <iostream>
 #include <fstream>
+#include <string>
 #include "raylib.h"
-#include "../rlimgui/rlImGui.h"
-#include "buildinfo.h"
+//#include "raymath.h"
+#include "rlimgui/imgui.h"
+#include "rlimgui/rlImGui.h"
 
 using namespace std;
