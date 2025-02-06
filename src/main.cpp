@@ -148,6 +148,8 @@ int main(int argc, char* argv[]){
 						if(config.fullscreen && !IsWindowFullscreen()) ToggleFullscreen();
 						if(!config.fullscreen && IsWindowFullscreen()) ToggleFullscreen();
 						SetTargetFPS(config.targetFPS);
+						config.copyrightX = config.monitorWidth-5*34;
+						config.copyrightY = config.monitorHeight-10;
 					}
 				ImGui::End();
 			}
@@ -227,7 +229,7 @@ int main(int argc, char* argv[]){
 
 					}
 					if(ImGui::CollapsingHeader("About")){
-						ImGui::Text("C-3PO v0.2.0");
+						ImGui::Text("C-3PO v0.2.1");
 						//ImGui::Text("------------");
 						ImGui::Text("Copyright © 2025 Benjamin Braun");
 						ImGui::Text("Licensed under MIT License");
