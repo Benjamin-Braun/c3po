@@ -276,7 +276,7 @@ int main(int argc, char* argv[]){
 					if(ImGui::CollapsingHeader("Camera")){
 						ImGui::Checkbox("Camera Enable", &context.cameraEnable);
 						const char* items[] = { "Orbital", "Static", "First Person", "Free" };
-            			ImGui::Combo("Draw Mode", &context.camerType, items, IM_ARRAYSIZE(items));
+            			ImGui::Combo("Camera Mode", &context.camerType, items, IM_ARRAYSIZE(items));
 						if(ImGui::Button("Camera Reset")){
 							camera.position = (Vector3){ 5.0f, 5.0f, 5.0f };
     						camera.target = (Vector3){ 0.0f, 0.0f, 0.0f };
@@ -333,7 +333,7 @@ int main(int argc, char* argv[]){
 						}
 					}
 					if(ImGui::CollapsingHeader("About")){
-						ImGui::Text("C-3PO v0.5.1");
+						ImGui::Text("C-3PO v0.5.2");
 						//ImGui::Text("------------");
 						ImGui::Text("Copyright © 2025 Benjamin Braun");
 						ImGui::Text("Licensed under MIT License");
