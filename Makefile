@@ -5,7 +5,7 @@ compile:
 	$(CC) $(IN) bin/icon.o -o bin/alpha -lraylib -lgdi32 -lwinmm
 
 run:
-	bin/alpha test.obj
+	bin/alpha p911/scene.gltf
 
 compile.run:
 	$(CC) $(IN) bin/icon.o -o bin/alpha -lraylib -lgdi32 -lwinmm
