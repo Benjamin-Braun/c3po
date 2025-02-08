@@ -44,10 +44,10 @@ bool carWin = false;
 bool cursorVisible = true;
 
 ConfigStruct ParseArgs(int argc, char* argv[]){
-	if(argc < 2){
+	/*if(argc < 2){
 		cout << "Invalid argument count!" << endl << "c3po <model> <width> <height> <fullscreen>" << endl;
 		//exit(1);
-	}
+	}*/
 
 	ConfigStruct newConfig;
 	newConfig.screenWidth = 1280;
@@ -333,7 +333,7 @@ int main(int argc, char* argv[]){
 						}
 					}
 					if(ImGui::CollapsingHeader("About")){
-						ImGui::Text("C-3PO v0.5.0");
+						ImGui::Text("C-3PO v0.5.1");
 						//ImGui::Text("------------");
 						ImGui::Text("Copyright © 2025 Benjamin Braun");
 						ImGui::Text("Licensed under MIT License");
