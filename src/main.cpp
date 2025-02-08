@@ -84,17 +84,15 @@ void fullscreen(){
 }
 
 int main(int argc, char* argv[]){
+	cout << "=== C-3PO ===" << endl << endl;
+	cout << "Initializing..." << endl;
 	config = ParseArgs(argc, argv);
 	config.targetFPS = 60;
 	config.copyrightX = config.screenWidth-5*34;
 	config.copyrightY = config.screenHeight-10;
 
-	SetTraceLogLevel(LOG_ERROR); 
+	SetTraceLogLevel(LOG_ERROR);
 	SetConfigFlags(FLAG_MSAA_4X_HINT | FLAG_VSYNC_HINT);
-	InitWindow(config.screenWidth, config.screenHeight, "C-3PO");
-	SetTargetFPS(config.targetFPS);
-	if(config.fullscreen) ToggleFullscreen();
-	rlImGuiSetup(true);
 
 	Camera camera = { 0 };
     camera.position = (Vector3){ 5.0f, 5.0f, 5.0f };
@@ -102,12 +100,28 @@ int main(int argc, char* argv[]){
     camera.up = (Vector3){ 0.0f, 1.0f, 0.0f };
     camera.fovy = 45.0f;
     camera.projection = CAMERA_PERSPECTIVE;
+
+	cout << "Initializing Renderer..." << endl;
+	InitWindow(config.screenWidth, config.screenHeight, "C-3PO");
+	SetTargetFPS(config.targetFPS);
+	if(config.fullscreen) ToggleFullscreen();
+	rlImGuiSetup(true);
+
+	BeginDrawing();
+		ClearBackground(BLACK);
+		DrawText("Loading Model Data...", 0, 0, 50, WHITE);
+		DrawText("The program may not respond during this process.", 0, 50, 15, WHITE);
+		DrawText("Copyright © 2025 Benjamin Braun", config.copyrightX, config.copyrightY, 5, reversefloat4tocolor(context.backgroundColor));
+	EndDrawing();
+
+	cout << "Loading Model..." << endl;
 	Model model = LoadModel(config.model.c_str());
 
 	int display = GetCurrentMonitor();
 	config.monitorWidth = GetMonitorWidth(display);
 	config.monitorHeight = GetMonitorHeight(display);
 
+	cout << "Done." << endl;
 	while (!WindowShouldClose()){
 		if(IsKeyPressed(KEY_F11)) fullscreen();
 		if(IsKeyPressed(KEY_F1)) helpWin = !helpWin;
@@ -266,7 +280,7 @@ int main(int argc, char* argv[]){
 						}
 					}
 					if(ImGui::CollapsingHeader("About")){
-						ImGui::Text("C-3PO v0.3.2");
+						ImGui::Text("C-3PO v0.4.0");
 						//ImGui::Text("------------");
 						ImGui::Text("Copyright © 2025 Benjamin Braun");
 						ImGui::Text("Licensed under MIT License");
