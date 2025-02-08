@@ -1,12 +1,9 @@
-CC=g++
-IN=src/*.cpp src/rlimgui/*.cpp
+compile.win:
+	g++ src/*.cpp src/rlimgui/*.cpp bin/icon.o -o bin/win -lraylib -lgdi32 -lwinmm
 
-compile:
-	$(CC) $(IN) bin/icon.o -o bin/alpha -lraylib -lgdi32 -lwinmm
+run.win:
+	bin/win.exe p911/scene.gltf
 
-run:
-	bin/alpha p911/scene.gltf
-
-compile.run:
-	$(CC) $(IN) bin/icon.o -o bin/alpha -lraylib -lgdi32 -lwinmm
-	bin/alpha test.obj
+compile.run.win:
+	g++ src/*.cpp src/rlimgui/*.cpp bin/icon.o -o bin/win -lraylib -lgdi32 -lwinmm
+	bin/win.exe test.obj

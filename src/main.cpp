@@ -151,7 +151,7 @@ int main(int argc, char* argv[]){
 					ImGui::InputInt("Height", &config.screenHeight, 10);
 					ImGui::SeparatorText("Display");
 					ImGui::Checkbox("Fullscreen", &config.fullscreen);
-					ImGui::InputInt("Target FPS", &config.targetFPS);
+					ImGui::InputInt("Target Framerate", &config.targetFPS);
 					if(ImGui::Button("Apply")){
 						SetWindowSize(config.screenWidth, config.screenHeight);
 						if(config.fullscreen && !IsWindowFullscreen()) ToggleFullscreen();
@@ -242,19 +242,31 @@ int main(int argc, char* argv[]){
 			if(helpWin){
 				ImGui::Begin("Help");
 					if(ImGui::CollapsingHeader("General")){
-
+						if(ImGui::TreeNode("Key Binds")){
+							ImGui::Text("F1    - Help");
+							ImGui::Text("F2    - Toggle Cursor");
+							ImGui::Text("F10   - Display Settings");
+							ImGui::Text("F11   - Toggle Fullscreen");
+							ImGui::Text("F12   - Take Screenshot");
+							ImGui::Text("TAB   - Tweaks");
+							ImGui::TreePop();
+						}
 					}
 					if(ImGui::CollapsingHeader("Display")){
-
+						ImGui::Text("Avaible Options:\n- Resolution (Width & Height)\n- Fullscreen\n- Target Framerate");
 					}
 					if(ImGui::CollapsingHeader("Tweaks")){
-
-					}
-					if(ImGui::CollapsingHeader("Support")){
-
+						if(ImGui::TreeNode("Grid")){
+							ImGui::SeparatorText("Enable Grid"); ImGui::TextWrapped("Enable and Disable the Grid; i.e. Show or Hide the Grid");
+							ImGui::SeparatorText("Grid Type"); ImGui::TextWrapped("There are currently two types of Grids. \"Grid\" is the normal Grid. \"Plane\" is a Plane. Note that the Plane behavesa bit different to size options.");
+							ImGui::SeparatorText("Grid Size"); ImGui::TextWrapped("Number of Tiles along the width and length.");
+							ImGui::SeparatorText("Grid Tile Size"); ImGui::TextWrapped("Size of every individual Tile.");
+							ImGui::SeparatorText("Grid Color"); ImGui::TextWrapped("Color of the Grid. Note: Only works with \"Plane\" Type.");
+							ImGui::TreePop();
+						}
 					}
 					if(ImGui::CollapsingHeader("About")){
-						ImGui::Text("C-3PO v0.3.1");
+						ImGui::Text("C-3PO v0.3.2");
 						//ImGui::Text("------------");
 						ImGui::Text("Copyright © 2025 Benjamin Braun");
 						ImGui::Text("Licensed under MIT License");
