@@ -23,6 +23,8 @@ struct ContextStruct {
 	int modelDrawMode = 0;
 	float modelColor[4] = {1, 1, 1, 1};
 	Vector3 modelScale = {1, 1, 1};
+	int modelScaleComb = 1;
+	int omodelScaleComb = 1;
 	Vector3 modelPosition = {0, 0, 0};
 	Vector3 modelRotation = {0, 0, 0};
 	float modelRotationAngle = 0;
@@ -139,6 +141,13 @@ int main(int argc, char* argv[]){
 		if(context.camerType == 2) UpdateCamera(&camera, CAMERA_FIRST_PERSON);
 		if(context.camerType == 3) UpdateCamera(&camera, CAMERA_FREE);
 		if(context.camerType == 1){}
+
+		if(context.omodelScaleComb != context.modelScaleComb){
+			context.modelScale.x = context.modelScaleComb;
+			context.modelScale.y = context.modelScaleComb;
+			context.modelScale.z = context.modelScaleComb;
+			context.omodelScaleComb = context.modelScaleComb;
+		}
 		
 		BeginDrawing();
 		ClearBackground(float4tocolor(context.backgroundColor));
@@ -185,7 +194,7 @@ int main(int argc, char* argv[]){
             				ImGui::Combo("Grid Type", &context.gridType, items, IM_ARRAYSIZE(items));
 							ImGui::SliderInt("Grid Size", &context.grid1, 1, 400);
 							ImGui::InputFloat("Grid Tile Size", &context.grid2, 0.1f);
-							ImGui::ColorEdit4("Grid Color", context.modelColor);
+							ImGui::ColorEdit4("Grid Color", context.gridColor);
 							ImGui::TreePop();
 						}
 						if(ImGui::TreeNode("Model")){
@@ -201,6 +210,7 @@ int main(int argc, char* argv[]){
 								ImGui::TreePop();
 							}
 							if(ImGui::TreeNode("Scale")){
+								ImGui::DragInt("Scale", &context.modelScaleComb, 1, 1000);
 								ImGui::InputFloat("Scale X", &context.modelScale.x, 0.1f);
 								ImGui::InputFloat("Scale Y", &context.modelScale.y, 0.1f);
 								ImGui::InputFloat("Scale Z", &context.modelScale.z, 0.1f);
@@ -280,7 +290,7 @@ int main(int argc, char* argv[]){
 						}
 					}
 					if(ImGui::CollapsingHeader("About")){
-						ImGui::Text("C-3PO v0.4.0");
+						ImGui::Text("C-3PO v0.4.1");
 						//ImGui::Text("------------");
 						ImGui::Text("Copyright © 2025 Benjamin Braun");
 						ImGui::Text("Licensed under MIT License");
