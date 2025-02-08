@@ -1,3 +1,17 @@
+lib.linux:
+	rm bin/*.o
+	$(foreach file, $(wildcard rlimgui/*.cpp), g++ $(file) -c -o bin/$(shell basename $(file)).o -lraylib;)
+
+compile.linux:
+	g++ src/*.cpp bin/*.o -o bin/linux.x86_64 -lraylib
+
+run.linux:
+	bin/linux.x86_64 p911/scene.gltf
+
+compile.run.linux:
+	g++ src/*.cpp bin/*.o -o bin/linux.x86_64 -lraylib
+	bin/linux.x86_64 test.obj
+
 lib.win:
 	rm bin/*.o
 	$(foreach file, $(wildcard rlimgui/*.cpp), g++ $(file) -c -o bin/$(shell basename $(file)).o -lraylib -lgdi32 -lwinmm;)
