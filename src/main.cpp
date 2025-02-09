@@ -191,40 +191,28 @@ int main(int argc, char* argv[]){
 			if(carWin){
 				ImGui::Begin("Car Selection");
 					if(ImGui::CollapsingHeader("Audi")){
-						ImGui::SeparatorText("Audi R8 Green Hell Edition (2021)");
-						if(ImGui::Button("Load R8")){ ClearBackground(BLACK);DrawText("Loading Model Data...", 0, 0, 50, WHITE);DrawText("The program may not respond during this process.", 0, 50, 15, WHITE);DrawText("Copyright © 2025 Benjamin Braun", config.copyrightX, config.copyrightY, 5, WHITE);model = LoadModel("models/r8/scene.gltf");context.modelScaleComb=100; }
-						ImGui::Text("Credits:");
-						ImGui::TextWrapped("This work is based on \"2021 Audi R8 Green Hell Edition\" (https://sketchfab.com/3d-models/2021-audi-r8-green-hell-edition-8ab3e0f5f18b46508fd9caefbf0f9b33) by Ddiaz Design (https://sketchfab.com/ddiaz-design) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)");
-						ImGui::SeparatorText("Audi R8 LMS (2015)");
-						if(ImGui::Button("Load R8 LMS")){ ClearBackground(BLACK);DrawText("Loading Model Data...", 0, 0, 50, WHITE);DrawText("The program may not respond during this process.", 0, 50, 15, WHITE);DrawText("Copyright © 2025 Benjamin Braun", config.copyrightX, config.copyrightY, 5, WHITE);model = LoadModel("models/r8_lms/scene.gltf");context.modelScaleComb=10; }
-						ImGui::Text("Credits:");
-						ImGui::TextWrapped("This work is based on \"2015 Audi R8 LMS\" (https://sketchfab.com/3d-models/2015-audi-r8-lms-e36735f57d014dc7b3cddba772f187ea) by Ddiaz Design (https://sketchfab.com/ddiaz-design) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)");
-						ImGui::SeparatorText("Audi RS3 Sportback (2018)");
-						if(ImGui::Button("Load RS3")){ ClearBackground(BLACK);DrawText("Loading Model Data...", 0, 0, 50, WHITE);DrawText("The program may not respond during this process.", 0, 50, 15, WHITE);DrawText("Copyright © 2025 Benjamin Braun", config.copyrightX, config.copyrightY, 5, WHITE);model = LoadModel("models/rs3/scene.gltf");context.modelScaleComb=100; }
-						ImGui::Text("Credits:");
-						ImGui::TextWrapped("This work is based on \"2018 Audi RS3 Sportback\" (https://sketchfab.com/3d-models/2018-audi-rs3-sportback-20fdc17a5b2f4afab096337b5822c170) by Ddiaz Design (https://sketchfab.com/ddiaz-design) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)");
-						/*ImGui::SeparatorText(" ()");
-						if(ImGui::Button("Load Car")){ model = LoadModel("other/r8/scene.gltf");ClearBackground(BLACK);DrawText("Loading Model Data...", 0, 0, 50, WHITE);DrawText("The program may not respond during this process.", 0, 50, 15, WHITE);DrawText("Copyright © 2025 Benjamin Braun", config.copyrightX, config.copyrightY, 5, WHITE);context.modelScaleComb=100; }
-						ImGui::Text("Credits:");
-						ImGui::TextWrapped("");*/
+						for(int i=0; i<AUDI_CARS; i++){
+							ImGui::SeparatorText(audiCars[i].title.c_str());
+							if(ImGui::Button(audiCars[i].button.c_str())){
+								string tmp = "models/" + audiCars[i].folder + "/scene.gltf";
+								model = LoadModel(tmp.c_str());
+								context.modelScaleComb=audiCars[i].scale;
+							}
+							ImGui::Text("Credits:");
+							ImGui::TextWrapped(audiCars[i].credits.c_str());
+						}
 					}
 					if(ImGui::CollapsingHeader("Volkswagen")){
-						ImGui::SeparatorText("Volkswagen Golf GTI (1992)");
-						if(ImGui::Button("Load Golf 1992")){ ClearBackground(BLACK);DrawText("Loading Model Data...", 0, 0, 50, WHITE);DrawText("The program may not respond during this process.", 0, 50, 15, WHITE);DrawText("Copyright © 2025 Benjamin Braun", config.copyrightX, config.copyrightY, 5, WHITE);model = LoadModel("models/1992_gti/scene.gltf");context.modelScaleComb=100; }
-						ImGui::Text("Credits:");
-						ImGui::TextWrapped("This work is based on \"1992 Volkswagen Golf GTI Mk2\" (https://sketchfab.com/3d-models/1992-volkswagen-golf-gti-mk2-1fb8f26b105445fbaa98ca2577f7067e) by Ddiaz Design (https://sketchfab.com/ddiaz-design) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)");
-						ImGui::SeparatorText("Volkswagen Golf GTI (2014)");
-						if(ImGui::Button("Load Golf 2014")){ ClearBackground(BLACK);DrawText("Loading Model Data...", 0, 0, 50, WHITE);DrawText("The program may not respond during this process.", 0, 50, 15, WHITE);DrawText("Copyright © 2025 Benjamin Braun", config.copyrightX, config.copyrightY, 5, WHITE);model = LoadModel("models/2014_gti/scene.gltf");context.modelScaleComb=100; }
-						ImGui::Text("Credits:");
-						ImGui::TextWrapped("This work is based on \"2014 Volkswagen Golf GTI Mk7\" (https://sketchfab.com/3d-models/2014-volkswagen-golf-gti-mk7-93f2b79c56c14b269fbe914205c4712e) by Ddiaz Design (https://sketchfab.com/ddiaz-design) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)");
-						ImGui::SeparatorText("Volkswagen Jetta (2019)");
-						if(ImGui::Button("Load Jetta")){ ClearBackground(BLACK);DrawText("Loading Model Data...", 0, 0, 50, WHITE);DrawText("The program may not respond during this process.", 0, 50, 15, WHITE);DrawText("Copyright © 2025 Benjamin Braun", config.copyrightX, config.copyrightY, 5, WHITE);model = LoadModel("models/jetta/scene.gltf");context.modelScaleComb=1; }
-						ImGui::Text("Credits:");
-						ImGui::TextWrapped("This work is based on \"2019 Volkswagen Jetta\" (https://sketchfab.com/3d-models/2019-volkswagen-jetta-c9031d4501f74639a2552539fd2dba36) by Ddiaz Design (https://sketchfab.com/ddiaz-design) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)");
-						ImGui::SeparatorText("Volkswagen Polo R WRC (2015)");
-						if(ImGui::Button("Load Polo WRC")){ ClearBackground(BLACK);DrawText("Loading Model Data...", 0, 0, 50, WHITE);DrawText("The program may not respond during this process.", 0, 50, 15, WHITE);DrawText("Copyright © 2025 Benjamin Braun", config.copyrightX, config.copyrightY, 5, WHITE);model = LoadModel("models/polo_wrc/scene.gltf");context.modelScaleComb=100; }
-						ImGui::Text("Credits:");
-						ImGui::TextWrapped("This work is based on \"2015 Volkswagen Polo R WRC\" (https://sketchfab.com/3d-models/2015-volkswagen-polo-r-wrc-d57694d382bc49d5b53ff470ce001219) by Ddiaz Design (https://sketchfab.com/ddiaz-design) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)");
+						for(int i=0; i<VW_CARS; i++){
+							ImGui::SeparatorText(vwCars[i].title.c_str());
+							if(ImGui::Button(vwCars[i].button.c_str())){
+								string tmp = "models/" + vwCars[i].folder + "/scene.gltf";
+								model = LoadModel(tmp.c_str());
+								context.modelScaleComb=vwCars[i].scale;
+							}
+							ImGui::Text("Credits:");
+							ImGui::TextWrapped(vwCars[i].credits.c_str());
+						}
 					}
 				ImGui::End();
 			}
@@ -333,7 +321,7 @@ int main(int argc, char* argv[]){
 						}
 					}
 					if(ImGui::CollapsingHeader("About")){
-						ImGui::Text("C-3PO v0.5.4");
+						ImGui::Text("C-3PO v0.6.0");
 						//ImGui::Text("------------");
 						ImGui::Text("Copyright © 2025 Benjamin Braun");
 						ImGui::Text("Licensed under MIT License");
