@@ -1,0 +1,11 @@
+Model Information:
+* title:	2021 Volkswagen ID.6 X
+* source:	https://sketchfab.com/3d-models/2021-volkswagen-id6-x-a3dd4f3e9ecf4f858aa19ac7534676d3
+* author:	Ddiaz Design (https://sketchfab.com/ddiaz-design)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "2021 Volkswagen ID.6 X" (https://sketchfab.com/3d-models/2021-volkswagen-id6-x-a3dd4f3e9ecf4f858aa19ac7534676d3) by Ddiaz Design (https://sketchfab.com/ddiaz-design) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

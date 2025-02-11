@@ -1,0 +1,11 @@
+Model Information:
+* title:	2022 Volkswagen Passat PHEV
+* source:	https://sketchfab.com/3d-models/2022-volkswagen-passat-phev-0e668a2cc10647b1a6e47e06384aa26a
+* author:	Ddiaz Design (https://sketchfab.com/ddiaz-design)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "2022 Volkswagen Passat PHEV" (https://sketchfab.com/3d-models/2022-volkswagen-passat-phev-0e668a2cc10647b1a6e47e06384aa26a) by Ddiaz Design (https://sketchfab.com/ddiaz-design) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

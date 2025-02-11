@@ -1,0 +1,11 @@
+Model Information:
+* title:	2018 Porsche 911 GT2 RS Weissach Package
+* source:	https://sketchfab.com/3d-models/2018-porsche-911-gt2-rs-weissach-package-3d84bed1c5794403a80580eebc2a4c72
+* author:	Ddiaz Design (https://sketchfab.com/ddiaz-design)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "2018 Porsche 911 GT2 RS Weissach Package" (https://sketchfab.com/3d-models/2018-porsche-911-gt2-rs-weissach-package-3d84bed1c5794403a80580eebc2a4c72) by Ddiaz Design (https://sketchfab.com/ddiaz-design) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

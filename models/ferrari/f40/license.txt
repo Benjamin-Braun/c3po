@@ -1,0 +1,11 @@
+Model Information:
+* title:	1989 Ferrari F40 LM
+* source:	https://sketchfab.com/3d-models/1989-ferrari-f40-lm-8f67f3c0bbcc4e7084ee7f49cab9c7db
+* author:	Ddiaz Design (https://sketchfab.com/ddiaz-design)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "1989 Ferrari F40 LM" (https://sketchfab.com/3d-models/1989-ferrari-f40-lm-8f67f3c0bbcc4e7084ee7f49cab9c7db) by Ddiaz Design (https://sketchfab.com/ddiaz-design) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

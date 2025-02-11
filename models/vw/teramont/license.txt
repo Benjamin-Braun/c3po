@@ -1,0 +1,11 @@
+Model Information:
+* title:	2022 Volkswagen Teramont 530 V6 4Motion
+* source:	https://sketchfab.com/3d-models/2022-volkswagen-teramont-530-v6-4motion-ed2878a43724426b9c1f8d670f0e6073
+* author:	Ddiaz Design (https://sketchfab.com/ddiaz-design)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "2022 Volkswagen Teramont 530 V6 4Motion" (https://sketchfab.com/3d-models/2022-volkswagen-teramont-530-v6-4motion-ed2878a43724426b9c1f8d670f0e6073) by Ddiaz Design (https://sketchfab.com/ddiaz-design) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

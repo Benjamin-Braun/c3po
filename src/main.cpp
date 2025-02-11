@@ -193,32 +193,106 @@ int main(int argc, char* argv[]){
 					if(ImGui::CollapsingHeader("Audi")){
 						for(int i=0; i<AUDI_CARS; i++){
 							ImGui::SeparatorText(audiCars[i].title.c_str());
-							if(ImGui::Button(audiCars[i].button.c_str())){
-								string tmp = "models/" + audiCars[i].folder + "/scene.gltf";
+							string tmp2 = "Load Car##1" + to_string(i);
+							if(ImGui::Button(tmp2.c_str())){
+								string tmp = "models/audi/" + audiCars[i].folder + "/scene.gltf";
+								cout << tmp << endl;
 								model = LoadModel(tmp.c_str());
 								context.modelScaleComb=audiCars[i].scale;
 							}
-							ImGui::Text("Credits:");
-							ImGui::TextWrapped(audiCars[i].credits.c_str());
+							string tmp = "Credits##1" + to_string(i);
+							if(ImGui::TreeNode(tmp.c_str())){
+								ImGui::TextWrapped(audiCars[i].credits.c_str());
+								ImGui::TreePop();
+							}
+							
 						}
 					}
 					if(ImGui::CollapsingHeader("Volkswagen")){
 						for(int i=0; i<VW_CARS; i++){
 							ImGui::SeparatorText(vwCars[i].title.c_str());
-							if(ImGui::Button(vwCars[i].button.c_str())){
-								string tmp = "models/" + vwCars[i].folder + "/scene.gltf";
+							string tmp2 = "Load Car##2" + to_string(i);
+							if(ImGui::Button(tmp2.c_str())){
+								string tmp = "models/vw/" + vwCars[i].folder + "/scene.gltf";
 								model = LoadModel(tmp.c_str());
 								context.modelScaleComb=vwCars[i].scale;
 							}
-							ImGui::Text("Credits:");
-							ImGui::TextWrapped(vwCars[i].credits.c_str());
+							string tmp = "Credits##2" + to_string(i);
+							if(ImGui::TreeNode(tmp.c_str())){
+								ImGui::TextWrapped(vwCars[i].credits.c_str());
+								ImGui::TreePop();
+							}
+						}
+					}
+					if(ImGui::CollapsingHeader("Ferrari")){
+						for(int i=0; i<FERRARI_CARS; i++){
+							ImGui::SeparatorText(ferrariCars[i].title.c_str());
+							string tmp2 = "Load Car##2" + to_string(i);
+							if(ImGui::Button(tmp2.c_str())){
+								string tmp = "models/ferrari/" + ferrariCars[i].folder + "/scene.gltf";
+								model = LoadModel(tmp.c_str());
+								context.modelScaleComb=ferrariCars[i].scale;
+							}
+							string tmp = "Credits##2" + to_string(i);
+							if(ImGui::TreeNode(tmp.c_str())){
+								ImGui::TextWrapped(ferrariCars[i].credits.c_str());
+								ImGui::TreePop();
+							}
+						}
+					}
+					if(ImGui::CollapsingHeader("Jaguar")){
+						for(int i=0; i<JAGUAR_CARS; i++){
+							ImGui::SeparatorText(jaguarCars[i].title.c_str());
+							string tmp2 = "Load Car##2" + to_string(i);
+							if(ImGui::Button(tmp2.c_str())){
+								string tmp = "models/jaguar/" + jaguarCars[i].folder + "/scene.gltf";
+								model = LoadModel(tmp.c_str());
+								context.modelScaleComb=jaguarCars[i].scale;
+							}
+							string tmp = "Credits##2" + to_string(i);
+							if(ImGui::TreeNode(tmp.c_str())){
+								ImGui::TextWrapped(jaguarCars[i].credits.c_str());
+								ImGui::TreePop();
+							}
+						}
+					}
+					if(ImGui::CollapsingHeader("Lamborghini")){
+						for(int i=0; i<LAMBO_CARS; i++){
+							ImGui::SeparatorText(lamboCars[i].title.c_str());
+							string tmp2 = "Load Car##2" + to_string(i);
+							if(ImGui::Button(tmp2.c_str())){
+								string tmp = "models/lambo/" + lamboCars[i].folder + "/scene.gltf";
+								model = LoadModel(tmp.c_str());
+								context.modelScaleComb=lamboCars[i].scale;
+							}
+							string tmp = "Credits##2" + to_string(i);
+							if(ImGui::TreeNode(tmp.c_str())){
+								ImGui::TextWrapped(lamboCars[i].credits.c_str());
+								ImGui::TreePop();
+							}
+						}
+					}
+					if(ImGui::CollapsingHeader("Porsche")){
+						for(int i=0; i<PORSCHE_CARS; i++){
+							ImGui::SeparatorText(porscheCars[i].title.c_str());
+							string tmp2 = "Load Car##2" + to_string(i);
+							if(ImGui::Button(tmp2.c_str())){
+								string tmp = "models/porsche/" + porscheCars[i].folder + "/scene.gltf";
+								model = LoadModel(tmp.c_str());
+								context.modelScaleComb=porscheCars[i].scale;
+							}
+							string tmp = "Credits##2" + to_string(i);
+							if(ImGui::TreeNode(tmp.c_str())){
+								ImGui::TextWrapped(porscheCars[i].credits.c_str());
+								ImGui::TreePop();
+							}
 						}
 					}
 				ImGui::End();
 			}
 			if(modelWin){
 				ImGui::Begin("Tweaks");
-					if(ImGui::CollapsingHeader("Display")){
+					if(ImGui::CollapsingHeader("Scene")){
 						if(ImGui::TreeNode("Grid")){
 							ImGui::Checkbox("Enable Grid", &context.gridEnable);
 							const char* items[] = { "Grid", "Plane" };

@@ -1,0 +1,11 @@
+Model Information:
+* title:	2017 Volkswagen Amarok V6
+* source:	https://sketchfab.com/3d-models/2017-volkswagen-amarok-v6-3272be01e2f946c4bda1c1b5ed73d3a4
+* author:	Ddiaz Design (https://sketchfab.com/ddiaz-design)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "2017 Volkswagen Amarok V6" (https://sketchfab.com/3d-models/2017-volkswagen-amarok-v6-3272be01e2f946c4bda1c1b5ed73d3a4) by Ddiaz Design (https://sketchfab.com/ddiaz-design) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

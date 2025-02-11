@@ -1,0 +1,11 @@
+Model Information:
+* title:	2019 Ferrari P80/C
+* source:	https://sketchfab.com/3d-models/2019-ferrari-p80c-f55ad553e43c4dd690186d66efb49120
+* author:	Ddiaz Design (https://sketchfab.com/ddiaz-design)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "2019 Ferrari P80/C" (https://sketchfab.com/3d-models/2019-ferrari-p80c-f55ad553e43c4dd690186d66efb49120) by Ddiaz Design (https://sketchfab.com/ddiaz-design) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

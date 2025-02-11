@@ -1,0 +1,11 @@
+Model Information:
+* title:	2003 Audi TT 3.2 DSG quattro
+* source:	https://sketchfab.com/3d-models/2003-audi-tt-32-dsg-quattro-65d176a9aec34d959369f8504d4c1cf9
+* author:	Ddiaz Design (https://sketchfab.com/ddiaz-design)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "2003 Audi TT 3.2 DSG quattro" (https://sketchfab.com/3d-models/2003-audi-tt-32-dsg-quattro-65d176a9aec34d959369f8504d4c1cf9) by Ddiaz Design (https://sketchfab.com/ddiaz-design) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
